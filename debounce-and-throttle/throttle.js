@@ -9,11 +9,11 @@ function throttle(func, timeFrame) {
     }
 }
 
-function log() {
-    console.log("yo");
+function log(msg) {
+    console.log(msg);
 }
 
-const throttledLog = throttle(log, 300);
+const throttledLog = throttle(() => log('haha'), 300);
 
 throttledLog();
 throttledLog();
